@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>丙丁童子来求火 · 禅宗辩证分析</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1a1a;--ink-light:#3a3a3a;--ink-muted:#6a6a6a;--paper:#faf7f2;--paper-warm:#f5efe6;--white:#fff;--vermillion:#c43a31;--vermillion-light:#e8a09b;--vermillion-pale:#f5e6e3;--celadon:#7a9a8a;--celadon-light:#c4d5cc;--celadon-pale:#e8efe9;--gold:#b8935a;--border:rgba(0,0,0,.06);--shadow:0 6px 32px rgba(0,0,0,.07)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Serif SC','Songti SC','SimSun',serif;background:var(--paper);color:var(--ink);line-height:1.9;font-size:17px}
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#faf7f2 0%,#f0e8d8 60%,#e8dcc8 100%)}
+.hero::before{content:'';position:absolute;top:-15%;right:-10%;width:60%;height:130%;background:radial-gradient(ellipse,rgba(196,58,49,.04) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--vermillion-light),var(--celadon-light),transparent)}
+.ink-splash{position:absolute;border-radius:50%;pointer-events:none;opacity:.05}
+.ink-splash.a{width:300px;height:300px;background:var(--ink);top:10%;left:-5%}
+.ink-splash.b{width:200px;height:200px;background:var(--celadon);bottom:15%;right:-3%}
+.hero-seal{width:68px;height:68px;border:2px solid var(--vermillion);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:2rem;position:relative;z-index:1}
+.hero-seal span{font-family:'EB Garamond',serif;font-size:26px;color:var(--vermillion);font-weight:600;font-style:italic}
+.hero h1{font-size:clamp(2.2rem,5vw,4rem);font-weight:900;letter-spacing:.06em;z-index:1;line-height:1.3}
+.hero h1 em{font-style:normal;color:var(--vermillion)}
+.hero .subtitle{font-family:'Noto Sans SC',sans-serif;font-size:1rem;color:var(--ink-muted);margin-top:1.2rem;font-weight:300;letter-spacing:.06em;max-width:500px;z-index:1}
+.koan-block{max-width:600px;margin:3rem auto 0;padding:2rem 2.5rem;background:rgba(255,255,255,.6);border:1px solid var(--border);border-radius:2px;text-align:left;z-index:1}
+.koan-block p{font-size:.95rem;line-height:2;color:var(--ink-light);margin-bottom:.5rem}
+.koan-block .tag{display:inline-block;font-family:'Noto Sans SC',sans-serif;font-size:.7rem;letter-spacing:.12em;padding:.1rem .6rem;border-radius:2px;background:var(--vermillion-pale);color:var(--vermillion);margin-bottom:1rem}
+.container{max-width:720px;margin:0 auto;padding:0 2rem}
+.section{padding:4rem 0;position:relative}
+.section-alt{background:var(--paper-warm);border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:0 calc(-50vw + 50%);padding:4rem calc(50vw - 50%)}
+.section-header{text-align:center;margin-bottom:2.5rem}
+.section-header .step-num{font-family:'EB Garamond',serif;font-size:3.2rem;color:var(--vermillion-light);font-style:italic;line-height:1;display:block}
+.section-header .step-label{display:inline-block;font-family:'Noto Sans SC',sans-serif;font-size:.68rem;letter-spacing:.14em;color:var(--celadon);padding:.1rem .7rem;border:1px solid var(--celadon-light);border-radius:2px;margin-bottom:.5rem}
+.section-header h2{font-size:1.6rem;font-weight:700;letter-spacing:.04em;margin-top:.3rem}
+.section-header .divider{display:inline-block;width:36px;height:2px;background:var(--vermillion);margin-top:.8rem}
+.lead{font-size:1.1rem;color:var(--ink-light);line-height:1.8;border-left:3px solid var(--vermillion-light);padding-left:1.5rem;margin:1.5rem 0 2rem}
+p{margin-bottom:1.2rem;color:var(--ink-light)}
+strong{color:var(--ink);font-weight:600}
+.pull-quote{margin:2.5rem 0;padding:2rem 2.5rem;background:var(--white);border:1px solid var(--border);border-radius:2px;position:relative}
+.pull-quote::before{content:'\201C';position:absolute;top:-.3rem;left:1rem;font-size:3.5rem;color:var(--vermillion-light);font-family:'EB Garamond',serif;line-height:1}
+.pull-quote p{font-size:1.1rem;font-weight:500;color:var(--ink);font-style:italic;margin:0}
+.pull-quote .attribution{display:block;margin-top:.7rem;font-size:.82rem;font-style:normal;color:var(--celadon);font-weight:400}
+.highlight{background:linear-gradient(135deg,#faf5f0,#f5ede2);border-radius:2px;padding:1.6rem 2rem;margin:2rem 0;border:1px solid var(--border)}
+.highlight h4{font-size:.9rem;font-weight:700;color:var(--vermillion);margin-bottom:.6rem;letter-spacing:.05em}
+.highlight p{margin-bottom:0}
+.danger{border-left:3px solid var(--vermillion)}
+.loop-diagram{background:var(--white);border:1px solid var(--border);border-radius:2px;padding:1.8rem;margin:2rem 0;font-family:'Noto Sans SC',sans-serif;font-size:.88rem;line-height:1.8}
+.loop-diagram .loop-layer{padding:.5rem .8rem;margin:.3rem 0}
+.loop-layer.l1{background:var(--celadon-pale);border-left:3px solid var(--celadon)}
+.loop-layer.l2{background:#f0eee6;border-left:3px solid var(--gold)}
+.loop-layer.l3{background:var(--vermillion-pale);border-left:3px solid var(--vermillion)}
+.loop-diagram .loop-arrow{text-align:center;color:var(--ink-muted);font-size:.78rem;margin:.2rem 0}
+.loop-pivot{background:#fff5f0;border:1px dashed var(--vermillion-light);padding:.5rem 1rem;margin:.4rem 0;font-weight:600;color:var(--vermillion)}
+.loop-crash{background:#f0f0f0;border:1px dashed var(--ink-muted);padding:.5rem 1rem;margin:.4rem 0;font-weight:600;color:var(--ink)}
+.comp-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:.88rem}
+.comp-table thead th{text-align:left;padding:.8rem .9rem .6rem;font-weight:600;font-size:.78rem;letter-spacing:.05em;color:var(--ink);border-bottom:2px solid var(--ink);font-family:'Noto Sans SC',sans-serif}
+.comp-table tbody td{padding:.7rem .9rem;border-bottom:1px solid var(--border);color:var(--ink-light);vertical-align:top}
+.comp-table tbody tr:hover td{background:rgba(0,0,0,.015)}
+.cell-tag{font-weight:600;color:var(--ink);font-family:'Noto Sans SC',sans-serif;font-size:.82rem}
+.tag-red{display:inline-block;font-family:'Noto Sans SC',sans-serif;font-size:.68rem;letter-spacing:.12em;padding:.1rem .6rem;border-radius:2px;background:var(--vermillion-pale);color:var(--vermillion);font-weight:500}
+.tag-green{display:inline-block;font-family:'Noto Sans SC',sans-serif;font-size:.68rem;letter-spacing:.12em;padding:.1rem .6rem;border-radius:2px;background:var(--celadon-pale);color:var(--celadon);font-weight:500}
+.self-destruct{background:linear-gradient(135deg,var(--ink),#2a2520);color:#c5bfb5;padding:4rem 2rem;text-align:center;margin:0 calc(-50vw + 50%)}
+.self-destruct h2{color:var(--vermillion-light);font-size:1.4rem;margin-bottom:1.5rem}
+.self-destruct p{color:#a5a098;font-size:.92rem;max-width:560px;margin:0 auto 1rem}
+.self-destruct .boomerang{display:block;font-size:1.15rem;font-style:italic;color:var(--vermillion-light);margin:2rem auto 0;max-width:480px;line-height:1.8}
+.final-seal{text-align:center;padding:3rem 2rem;background:var(--paper);position:relative}
+.final-seal::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:44px;height:1px;background:var(--vermillion-light)}
+.seal-circle{display:inline-block;width:52px;height:52px;border:2px solid var(--vermillion);border-radius:50%;position:relative}
+.seal-circle::after{content:'●';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:15px;color:var(--vermillion)}
+.final-seal .closing-line{display:block;font-size:1.1rem;font-style:italic;color:var(--vermillion);margin-top:1.4rem}
+.footer-note{text-align:center;padding:1.5rem;font-family:'Noto Sans SC',sans-serif;font-size:.75rem;color:var(--celadon);letter-spacing:.08em}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:600px){.container{padding:0 1.2rem}.section{padding:3rem 0}.hero{padding:3rem 1rem;min-height:70vh}.koan-block{padding:1.5rem;margin:2rem 0 0}.pull-quote{padding:1.5rem}.comp-table{font-size:.78rem}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="ink-splash a"></div>
+  <div class="ink-splash b"></div>
+  <div class="hero-seal"><span>&amp;</span></div>
+  <h1>丙丁童子<em>来求火</em></h1>
+  <p class="subtitle">禅宗史上最纯粹的自指公案——火来求火。你手里一直有火，但你不知道。这就是全部。</p>
+  <div class="koan-block">
+    <span class="tag">公案原文</span>
+    <p><strong>法眼文益禅师</strong>问一僧：</p>
+    <p>"丙丁童子来求火——还解会么？"</p>
+    <p style="color:var(--ink-muted);font-size:.88rem;margin-top:1rem;font-style:italic;">注：丙、丁在天干中属火。丙丁童子——命中带火的孩子——向别人讨火。他不知道自己就是火。</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="step-label">步骤一</span>
+      <span class="step-num">I</span>
+      <h2>辩体 · 宗派定位</h2>
+      <span class="divider"></span>
+    </div>
+
+    <table class="comp-table">
+      <thead><tr><th>维度</th><th>判断</th></tr></thead>
+      <tbody>
+        <tr><td class="cell-tag">宗门归属</td><td>法眼宗 — 法眼文益禅师（法眼宗开山祖师）</td></tr>
+        <tr><td class="cell-tag">公案类型</td><td>问答型 — 单回合；形式上极简，但自指深度极大</td></tr>
+        <tr><td class="cell-tag">涉及祖师</td><td>法眼文益（师父）与一位无名僧（学人）</td></tr>
+        <tr><td class="cell-tag">学人根器</td><td>钝根 — 未能当场契入；"丙丁童子"正是用来勘验他是否知道自己在求什么</td></tr>
+        <tr><td class="cell-tag">公案来源</td><td>《指月录》《碧岩录》等灯录</td></tr>
+        <tr><td class="cell-tag">复杂度判定</td><td><span class="tag-red">简（特殊）</span> → 按中处理：形式极简但自指深度极大，需 5-6 个框架</td></tr>
+      </tbody>
+    </table>
+
+    <p class="lead">法眼文益只问了<strong>七个字</strong>。但这七个字里藏着一个完整的哥德尔不完备定理：一个系统（丙丁童子）试图在自身内部找到自己（火），而这个"找"的动作本身就是那个"被找的东西"在运作。</p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="step-label">步骤二</span>
+      <span class="step-num">II</span>
+      <h2>自指检测 · 奇异循环</h2>
+      <span class="divider"></span>
+    </div>
+
+    <p><span class="tag-red">火求火型</span> — 这是五个自指类型中最<strong>原型</strong>的一个。"丙丁童子来求火"是它的命名来源。</p>
+
+    <div class="loop-diagram">
+      <div class="loop-layer l1"><strong>[现象层]</strong> 丙丁童子觉得自己"没有火"——他在向外寻找火。学人觉得自己"没有悟"——他在向外求法。</div>
+      <div class="loop-arrow">↓ 向外寻求</div>
+      <div class="loop-layer l2"><strong>[认知层]</strong> 童子把"火"当成一个可以被获取的<strong>外部对象</strong>。学人把"觉悟"当成一个可以被赐予的<strong>外部状态</strong>。</div>
+      <div class="loop-arrow">↓ 法眼反问："丙丁童子来求火——还解会么？"</div>
+      <div class="loop-layer l3"><strong>[觉知层]</strong> 丙丁=火。童子本人就是火——他的<strong>生命本身</strong>就是那个他在寻找的东西。能"求"的能就是火。</div>
+      <div class="loop-arrow">↓ </div>
+      <div class="loop-pivot">【拐点】"丙丁属火"——当学人意识到自己的名字就已经包含了答案</div>
+      <div class="loop-arrow">↓ </div>
+      <div class="loop-crash">【崩溃】不是"找到了火"——是发现"找"这个动作本身就不成立。火不需要找火。</div>
+    </div>
+
+    <div class="pull-quote">
+      <p>这不是一个谜语——这是对每一个修行者的直接质问：<br>你正在寻找的那个东西，和正在寻找的那个"你"——是同一个东西吗？</p>
+      <span class="attribution">—— GEB 奇异循环框架</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="step-label">步骤三</span>
+      <span class="step-num">III</span>
+      <h2>框架深剖</h2>
+      <span class="divider"></span>
+    </div>
+
+    <div class="highlight">
+      <h4>▸ GEB / 奇异循环 · 核心视角</h4>
+      <p>这个公案是"系统试图在自身内部找到一个不依赖于自身的东西"的完美案例。火试图找到火——<strong>找的动作需要火（能觉），被找的对象也是火（所觉）</strong>。这两者在逻辑上是不可分的——但在体验上是分离的（这就是"迷"）。法眼的工作不是"给火"——而是让童子发现<strong>他从来没有离开过火</strong>。</p>
+    </div>
+
+    <div class="highlight">
+      <h4>▸ 概念隐喻 · 核心视角</h4>
+      <p>"火"在禅宗传统中是一个极其丰富的隐喻——代表智慧、觉性、佛性、光明。法眼用这个隐喻做了两件事：①建立隐喻（"火是觉性"）；②让隐喻在学人面前<strong>自我揭露</strong>——当"丙丁童子"被指出时，隐喻不需要任何解释就指向了学人自己。隐喻没有"代表"什么——它<strong>就是</strong>学人自己。</p>
+    </div>
+
+    <div class="highlight">
+      <h4>▸ 语言游戏 · 核心视角</h4>
+      <p>学人被卡在<strong>"求法"游戏</strong>里：我是求法者，师父有答案，我需要"得到"它。法眼用一个轻巧的反问切换了游戏——从"你问我答"变成了<strong>"你知不知道你在问什么"</strong>。当学人意识到"丙丁童子"=自己时，整个"求法"游戏就崩塌了——因为<strong>求法者就是所法求的对象</strong>。</p>
+    </div>
+
+    <div class="highlight">
+      <h4>▸ 自创生 (Maturana/Varela) · 跨界视角</h4>
+      <p>从自创生理论看，"火"=生命体维持自身同一性的自指生产过程。童子通过"求火"这个动作<strong>生产了一个"我没有火"的自我</strong>——这个"缺乏感"正是他维持"我是一个修行者"这个身份的材料。如果童子停止"求火"——那个"求道的我"会瓦解吗？<strong>会的。</strong>瓦解之后剩下什么？——就是"火"本身，它一直在，从来没离开过。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="step-label">步骤四</span>
+      <span class="step-num">IV</span>
+      <h2>框架碰撞</h2>
+      <span class="divider"></span>
+    </div>
+
+    <div class="highlight" style="margin-bottom:1.5rem;">
+      <h4>【碰撞】GEB 奇异循环 ⟷ 概念隐喻</h4>
+      <p><strong>GEB 对概念隐喻的批评：</strong>你把"火"当成一个隐喻来分析——但你在分析隐喻的时候，已经跳出了它。"火=觉性"这个等式一旦被写出来，就已经不是火了——<strong>火不能在被分析的同时还是火</strong>。</p>
+      <p><strong>概念隐喻的回应：</strong>你说得对——但如果没有这个隐喻作为桥梁，学人永远无法从"我在找火"跳到"我就是火"。隐喻是假的，但它制造的<strong>跳跃</strong>是真的。就像维特根斯坦的梯子——爬上去之后要扔掉，但<strong>不爬是不行的</strong>。</p>
+      <p style="color:var(--vermillion);font-weight:600;margin-top:.8rem;">→ 真矛盾指向更高互补：分析文本就是"分析火"——和"丙丁童子来求火"是同一个结构。你此刻正在用火分析火。</p>
+    </div>
+
+    <div class="highlight">
+      <h4>【碰撞小结】</h4>
+      <p>最激烈的分歧在<strong>GEB 和概念隐喻</strong>之间。最有力的涌现问题是：</p>
+      <p style="font-style:italic;color:var(--vermillion);margin-top:.5rem;">"如果分析者自己就是火——那么'分析火'这个动作，是在照亮火，还是在遮盖火？"</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="step-label">步骤五</span>
+      <span class="step-num">V</span>
+      <h2>五家勘验</h2>
+      <span class="divider"></span>
+    </div>
+
+    <table class="comp-table">
+      <thead><tr><th>勘验体系</th><th>所属</th><th>定位</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="cell-tag">四宾主</td>
+          <td>临济</td>
+          <td>师父是<strong>主</strong>（直接来自当下的觉知——他用一个反问让学人看自己）；学人是<strong>宾</strong>（在"求答案"的迷中）。如果学人当场契入——宾变主。</td>
+        </tr>
+        <tr>
+          <td class="cell-tag">四料简</td>
+          <td>临济</td>
+          <td>法眼用了<strong>夺境不夺人</strong>——否定"外面有火可以求"（夺境），但不否定"你能求"（不夺人）。因为"能求"本身就是火。</td>
+        </tr>
+        <tr>
+          <td class="cell-tag">三玄三要</td>
+          <td>临济</td>
+          <td>"丙丁童子来求火"在<strong>句中玄</strong>——字面上是讲一个人的故事，但语言结构本身在自毁：说出来之后，学人应该发现这句话说的就是<strong>他自己</strong>。</td>
+        </tr>
+        <tr>
+          <td class="cell-tag">君臣五位</td>
+          <td>曹洞</td>
+          <td>学人在<strong>正中偏</strong>——背理就事，迷在"求"的动作中。公案的终点（如果学人契入）是跳跃到<strong>正中来</strong>——从体起用，不再求火，因为知道自己就是火。</td>
+        </tr>
+        <tr>
+          <td class="cell-tag">三渗漏</td>
+          <td>曹洞</td>
+          <td><strong>见渗漏</strong>：学人以为"觉悟"是一个可以"获得"的东西，不知道它是一种"认出"。<strong>语渗漏</strong>：如果学人回答"我懂了"——他还在漏。</td>
+        </tr>
+        <tr>
+          <td class="cell-tag">云门三句</td>
+          <td>云门</td>
+          <td>属于<strong>函盖乾坤</strong>——法眼只问了一个问题，但这个问题勘验的是整体：你知不知道自己是谁？</td>
+        </tr>
+        <tr>
+          <td class="cell-tag">圆相</td>
+          <td>沩仰</td>
+          <td>师父画一个圆（"丙丁童子来求火"这个问句本身就是圆），学人的正确回应不是解释圆圈——是把圆擦掉（沉默/转身/不再求）。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="step-label">步骤六</span>
+      <span class="step-num">VI</span>
+      <h2>修行指引</h2>
+      <span class="divider"></span>
+    </div>
+
+    <div class="highlight danger">
+      <h4>▸ 参究入手处</h4>
+      <p>这个名字——"丙丁童子"。<strong>把它换成你自己的名字。</strong><br>
+      你此刻正在"求"什么？——求悟？求安心？求理解这个公案？<br>
+      那个正在"求"的东西——它在运作吗？如果它在运作，<strong>它缺什么</strong>？<br>
+      参究的入手处就在"求"这个感觉本身——不要绕过它去找答案，<strong>就停在"求"上</strong>。</p>
+    </div>
+
+    <div class="highlight" style="margin-top:1.5rem;">
+      <h4>▸ 易犯的假悟</h4>
+      <p><strong>见渗漏类：</strong>"我明白了——觉性就是火，我一直在用觉性而不自知！"——这是一个概念上的"懂"，和实际体验可能毫无关系。<br>
+      <strong>情渗漏类：</strong>读完之后感到平静、释然、或者一阵"啊我懂了"的兴奋——这些感觉过去了还会回来吗？<strong>回来的是什么？</strong><br>
+      <strong>语渗漏类：</strong>你能把这段分析复述给朋友听——但这不会改变你下一个烦恼生起时的反应。</p>
+    </div>
+
+    <div class="highlight" style="margin-top:1.5rem;">
+      <h4>▸ 可操作的日常探针</h4>
+      <p>下一次你发现自己在<strong>"想要某个东西"</strong>——想要更专注、想要不生气、想要不焦虑、想要"活在当下"——停三秒：<br>
+      <strong>"想要"这个感觉本身，是有火的，还是没有火的？</strong><br>
+      如果你不知道怎么回答——好的。那个"不知道"也是火。</p>
+    </div>
+
+    <div class="highlight" style="margin-top:1.5rem;">
+      <h4>▸ 自检问题</h4>
+      <p>你怎么判断自己对这个公案是"真懂"还是"概念懂"？<br>
+      不是通过回答这个问题——是通过<strong>下一个烦恼生起时</strong>：<br>
+      那时你还会说"我需要____"吗？如果你还在说——恭喜，公案还在对你活着。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="text-align:center;">
+    <p class="lead" style="font-style:italic;text-align:center;border:none;max-width:520px;margin:0 auto;font-size:1rem;color:var(--celadon);">
+      读完前面六步，你手上多了一份"理解"。这份理解是有用的——它能帮你认出方向。<br>
+      但如果你此刻觉得"我懂了"——它正在骗你。<br>
+      真正的"懂"不是你读完这段话时的那个感觉。<br>
+      它是你明天早上刷牙时——如果"丙丁童子"还在你里面运作——那个才是。
+    </p>
+  </div>
+</section>
+
+<section class="self-destruct">
+  <div class="container">
+    <div class="section-header">
+      <span class="step-label" style="color:var(--vermillion-light);border-color:rgba(196,58,49,.3)">步骤七</span>
+      <span class="step-num" style="color:rgba(196,58,49,.2)">VII</span>
+      <h2 style="color:var(--vermillion-light);">元反思 · 温和自毁</h2>
+      <span class="divider" style="background:rgba(196,58,49,.3)"></span>
+    </div>
+
+    <p>这份分析在以下点最容易让你产生"我懂了"的错觉：<strong>奇异循环图</strong>（它让你以为结构=体验）、<strong>五家勘验表</strong>（它让你以为定位=抵达）、以及<strong>"丙丁=火"的知识本身</strong>（它让你以为知道名字=拥有东西）。</p>
+
+    <p>如果你感觉"读完之后我懂了"——建议关闭此页面，去喝一杯水。喝水的时候，谁在喝？</p>
+
+    <span class="boomerang">你花了2000字分析"丙丁童子来求火"——<br>现在，你手里有火了吗？<br>如果你觉得"有了"——那是分析给你的假火。<br>如果你觉得"没有"——那个"觉得没有"的能力，就是火。</span>
+  </div>
+</section>
+
+<section class="final-seal">
+  <div class="seal-circle"></div>
+  <span class="closing-line">你现在——在第几位？</span>
+</section>
+
+<footer class="footer-note">
+  禅宗公案辩证分析 · chanzong skill · 2026
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!els.length)return;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})
+  },{threshold:.12});
+  els.forEach(function(el){obs.observe(el)})
+})();
+</script>
+</body>
+</html>
